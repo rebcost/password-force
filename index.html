@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Indicator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <input type="password" placeholder="Password" id="password">
+            <button type="submit"><img src="arrow.png"></button>
+            <p id="message">Senha <span id="strenght"></span> </p>
+        </div>
+    </div>
+<script>
+    var pass = document.getElementById('password');
+    var msg = document.getElementById('message');
+    var str = document.getElementById('strenght');
+
+    pass.addEventListener('input', () => {
+        if(pass.value.length > 0){
+            msg.style.display = "block";
+        }else{
+            msg.style.display = "none";
+        }
+        if(pass.value.length < 5){
+            str.innerHTML = "Fraca";
+            pass.style.borderColor = "#ff5925";
+            msg.style.color = "#ff5925";
+        }else if(pass.value.length < 11){
+            str.innerHTML = "Médio";
+            pass.style.borderColor = "yellow";
+            msg.style.color = "yellow";
+        }else{
+            str.innerHTML = "Forte";
+            pass.style.borderColor = "green";
+            msg.style.color = "green";
+        }
+    })
+</script>
+</body>
+</html>
