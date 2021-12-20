@@ -7,7 +7,7 @@
 
 
 
-![image](https://github.com/rebcost/visa-card/blob/main/password.gif)
+![image](https://github.com/rebcost/password-force/blob/main/password.gif)
 
 Projeto de JavaScript em que é analisado se a senha digitado pelo usuário é fraco, médio e forte de acordo com a quantidade de caracteres.
 
